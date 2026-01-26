@@ -41,3 +41,15 @@
 .copyright span:hover {
   opacity: 0.7;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 40px 20px;
+  }
+  
+  .section__subtitle {
+    margin-bottom: 30px;
+    font-size: clamp(22px, 6vw, 28px);
+  }
+}

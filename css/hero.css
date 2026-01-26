@@ -90,6 +90,29 @@
   color: white;
 }
 
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  #hero {
+    padding: 80px 20px 40px 20px;
+  }
+  
+  #hero::before {
+    background-size: 80%;
+    background-position: center bottom;
+    top: auto;
+    bottom: 10%;
+    opacity: 0.3;
+  }
+  
+  #hero > h1 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+  
+  #hero > p {
+    font-size: 15px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   #hero {
     padding: 80px 60px;

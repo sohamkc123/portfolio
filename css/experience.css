@@ -73,3 +73,36 @@
   background: none;
   padding: 0;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .exp__container {
+    padding-left: 30px;
+    margin-left: 15px;
+  }
+  
+  .exp__box {
+    padding: 20px 15px;
+  }
+  
+  .exp__box::before {
+    left: -43px;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+  }
+  
+  .exp__box span {
+    position: static;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .exp__box > h2 {
+    font-size: 16px;
+  }
+  
+  .exp__box > h3 {
+    font-size: 14px;
+  }
+}

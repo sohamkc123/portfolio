@@ -90,3 +90,19 @@
   text-align: center;
   line-height: 1.6;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .about_skills {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about_skills > div {
+    padding: 30px 15px;
+  }
+  
+  .about_description {
+    font-size: 15px;
+  }
+}

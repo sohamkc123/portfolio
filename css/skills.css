@@ -48,6 +48,28 @@
   content: '%';
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .outer_box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .skill_box {
+    padding: 15px;
+  }
+  
+  .skill_box > p {
+    font-size: 14px;
+  }
+  
+  .skill_color_box > span {
+    font-size: 12px;
+    top: -26px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .outer_box {
     display: grid;

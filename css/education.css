@@ -73,3 +73,36 @@
   background: none;
   padding: 0;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .edu__container {
+    padding-left: 30px;
+    margin-left: 15px;
+  }
+  
+  .edu__box {
+    padding: 20px 15px;
+  }
+  
+  .edu__box::before {
+    left: -43px;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+  }
+  
+  .edu__box span {
+    position: static;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .edu__box > h2 {
+    font-size: 16px;
+  }
+  
+  .edu__box > h3 {
+    font-size: 14px;
+  }
+}
