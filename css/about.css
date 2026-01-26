@@ -1,0 +1,92 @@
+.about_description {
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.about_description p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-medium);
+}
+
+.about_skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about_skills > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--accent-color);
+  transition: all 0.2s ease;
+}
+
+.about_skills > div:hover {
+  border-top-color: var(--accent-light);
+  box-shadow: var(--shadow);
+}
+
+.about_skills > div:nth-child(2) {
+  border-top-color: var(--secondary-accent);
+}
+
+.about_skills > div:nth-child(2):hover {
+  border-top-color: var(--secondary-accent);
+}
+
+.about_skills > div:nth-child(3) {
+  border-top-color: var(--warm-accent);
+}
+
+.about_skills > div:nth-child(3):hover {
+  border-top-color: var(--warm-accent);
+}
+
+.about_skills > div:nth-child(4) {
+  border-top-color: var(--accent-light);
+}
+
+.about_skills > div:nth-child(4):hover {
+  border-top-color: var(--accent-light);
+}
+
+.about_skills i {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.about_skills > div:nth-child(2) i {
+  color: var(--secondary-accent);
+}
+
+.about_skills > div:nth-child(3) i {
+  color: var(--warm-accent);
+}
+
+.about_skills > div:nth-child(4) i {
+  color: var(--accent-light);
+}
+
+.about_skills h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: var(--text-dark);
+  font-size: 18px;
+}
+
+.about_skills p {
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.6;
+}

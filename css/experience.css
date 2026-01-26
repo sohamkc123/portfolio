@@ -1,0 +1,75 @@
+.exp__container {
+  margin-top: 50px;
+  padding-left: 50px;
+  margin-left: 30px;
+  border-left: 2px solid var(--accent-soft);
+  position: relative;
+}
+
+.exp__box {
+  background: var(--card-bg);
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--secondary-accent);
+  transition: all 0.2s ease;
+}
+
+.exp__box::before {
+  content: '';
+  position: absolute;
+  left: -56px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background: var(--secondary-accent);
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--secondary-accent);
+}
+
+.exp__box:hover {
+  border-left-color: var(--secondary-accent);
+  box-shadow: var(--shadow);
+}
+
+.exp__box > h2 {
+  font-size: 18px;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.exp__box > h3 {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: var(--text-medium);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.exp__box > h2,
+.exp__box > h3 {
+  font-family: var(--font-quicksand);
+}
+
+.exp__box span {
+  color: var(--text-light);
+  font-size: 12px;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  font-weight: 400;
+}
+
+.exp__box .stream {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: normal;
+  font-style: normal;
+  position: static;
+  background: none;
+  padding: 0;
+}

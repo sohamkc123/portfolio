@@ -1,0 +1,192 @@
+.sidebar_hamburger {
+  top: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 20px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: fixed;
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 8px 0;
+  box-shadow: 0 2px 8px rgba(26, 188, 156, 0.15);
+}
+
+.sidebar_hamburger:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.sidebar_hamburger_translate {
+  left: 280px;
+}
+
+.sidebar_content {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  z-index: 5;
+  height: 100vh;
+  background: #f2f8f2;
+  transition: left 0.3s ease;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--border-color);
+  box-shadow: 2px 0 20px rgba(26, 188, 156, 0.1);
+}
+
+.sidebar.open .sidebar_content {
+  left: 0;
+}
+
+.sidebar.open ~ * {
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar_content ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar__job {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--secondary-accent);
+  text-transform: uppercase;
+  font-family: var(--font-quicksand);
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.sidebar__country {
+  color: var(--text-medium);
+}
+
+.sidebar_image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 3px solid var(--accent-soft);
+  box-shadow: 0 0 0 1px var(--accent-color);
+}
+
+.sidebar_name {
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.sidebar_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.sidebar_list_item {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding: 10px 24px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: var(--text-medium);
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.sidebar_list_item:hover {
+  color: var(--accent-color);
+  background: var(--accent-soft);
+}
+
+.sidebar_list_item a {
+  color: inherit;
+  display: block;
+}
+
+.sidebar_follow1 {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding: 2px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.sidebar_follow .flex {
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar_follow a {
+  color: var(--text-medium);
+  transition: all 0.2s ease;
+}
+
+.sidebar_follow a:hover {
+  color: var(--accent-color);
+}
+
+.sidebar_list_item::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  background: #141415;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all ease 0.2s;
+}
+
+.sidebar_list_item:hover::after {
+  width: 120%;
+}
+
+/* Keep the Follow Me block visible near the top and centered */
+.sidebar_follow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -5px;
+}
+.sidebar_follow a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.sidebar_follow .flex {
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+}
