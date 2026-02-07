@@ -1,13 +1,13 @@
 #hero {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   padding: 60px 40px;
   width: 100%;
   box-sizing: border-box;
-  background: #fafdfb;
+  background: linear-gradient(180deg, #070708 0%, #0b0b0b 100%);
   position: relative;
   transition: margin-left 0.3s ease;
 }
@@ -15,27 +15,26 @@
 #hero::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: transparent;
-  z-index: 0;
+  inset: 0;
+  /* left-side overlay for text contrast — fades out toward the right so the decorative image stays clear */
+  background: linear-gradient(90deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.18) 40%, rgba(0,0,0,0) 70%);
+  z-index: 5;
+  pointer-events: none;
 }
 
 #hero::before {
   content: '';
   position: absolute;
-  top: 19%;
+  top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("../images/bgimage.png");
-  background-size: 62%;
+  width: 55%;
+  height: 100%;
+  background-image: url("../images/bg2.png");
+  background-size: 85% auto;
   background-repeat: no-repeat;
-  background-position: 75% center;
-  opacity: 0.9;
-  z-index: 1;
+  background-position: right center;
+  opacity: 1;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -63,7 +62,7 @@
   line-height: 1.7;
   font-size: 17px;
   color: var(--text-medium);
-  max-width: 600px;
+  max-width: 680px;
 }
 
 .hero__btn {
@@ -97,11 +96,11 @@
   }
   
   #hero::before {
-    background-size: 80%;
+    background-size: 60% auto;
     background-position: center bottom;
     top: auto;
-    bottom: 10%;
-    opacity: 0.3;
+    bottom: 6%;
+    opacity: 1;
   }
   
   #hero > h1 {
