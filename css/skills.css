@@ -77,3 +77,11 @@
     gap: 40px;
   }
 }
+
+/* Desktop: 3 columns */
+@media screen and (min-width: 1024px) {
+  .outer_box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
